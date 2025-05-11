@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCraft 2D</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 select-none">
+
+    <div class="game-container w-full max-w-3xl">
+        <h1 class="text-3xl font-bold mb-4">PixelCraft 2D</h1>
+
+        <div class="action-toggle mb-3 flex space-x-2">
+            <button id="mineButton" class="active">Tool: Mine</button>
+            <button id="placeButton">Tool: Place</button>
+        </div>
+        <p id="currentToolText" class="mb-2 text-sm h-10">Arrows/AD to Move, Space/Up/W to Jump. Click to interact.</p>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="hotbar" class="mt-4 p-2 bg-gray-200 rounded-lg shadow-md flex space-x-2 justify-center flex-wrap">
+            </div>
+        <p class="mt-2 info-text">Click canvas to mine/place (within 3 blocks). Click hotbar to select block.</p>
+         <p class="mt-1 info-text md:hidden">On touch: Tap to interact. Movement via keys (connect keyboard or use on-screen if available).</p>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
