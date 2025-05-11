@@ -9,24 +9,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4 select-none">
-
     <div class="game-container w-full max-w-3xl">
-        <h1 class="text-3xl font-bold mb-4">PixelCraft 2D</h1>
-
+        <h1 class="text-3xl font-bold mb-4">PixelCraft2D</h1>
         <div class="action-toggle mb-3 flex space-x-2">
             <button id="mineButton" class="active">Tool: Mine</button>
             <button id="placeButton">Tool: Place</button>
         </div>
         <p id="currentToolText" class="mb-2 text-sm h-10">Arrows/AD to Move, Space/Up/W to Jump. Click to interact.</p>
-
-        <canvas id="gameCanvas"></canvas>
-
-        <div id="hotbar" class="mt-4 p-2 bg-gray-200 rounded-lg shadow-md flex space-x-2 justify-center flex-wrap">
-            </div>
+        <div class="relative">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="hotbar" class="mt-4 p-2 bg-gray-200 rounded-lg shadow-md flex space-x-2 justify-center flex-wrap"></div>
         <p class="mt-2 info-text">Click canvas to mine/place (within 3 blocks). Click hotbar to select block.</p>
-         <p class="mt-1 info-text md:hidden">On touch: Tap to interact. Movement via keys (connect keyboard or use on-screen if available).</p>
+        <div id="touchControls" class="touch-controls md:hidden">
+            <button id="touchLeft" class="touch-button left">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="touchRight" class="touch-button right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+            <button id="touchJump" class="touch-button jump">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </button>
+        </div>
     </div>
-
     <script src="js/main.js" type="module"></script>
 </body>
 </html>

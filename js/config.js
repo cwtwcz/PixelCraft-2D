@@ -21,5 +21,7 @@ export const OPTIMAL_TIME = 1000 / TARGET_FPS; // Time per frame in ms
 
 export const BLOCK_TYPES = {
     AIR: 0, GRASS: 1, DIRT: 2, STONE: 3, WOOD: 4, LEAVES: 5,
-    COAL: 6, IRON_ORE: 7, SAND: 8 
-}; 
+    COAL: 6, IRON_ORE: 7, SAND: 8, SEED: 9, SEEDLING: 10, PLANTED_GRASS: 11
+};
+
+export const SEEDLING_GROWTH_TIME = 60000; // 1 minute in ms 
